@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>梦航软件</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+.row_space_class {
+	height: 30px;
+}
+
+.top_space_class {
+	height: 80px;
+}
+
+#h1 {
+	font-size: 55pt;
+	color: blue;
+	font-family: "隶书";
+	font-style: italic;
+}
+
+label {
+	color: black;
+	font-size: 20px;
+}
+
+#register {
+	width: 120px;
+}
+
+#ok {
+	width: 120px;
+}
+#wrong-tip{
+	font-family: "隶书";
+	font-size: 25pt;
+}
+#wrong-tip-content{
+	font-size: 14pt;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="top_space_class"></div>
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<h1 id="h1">梦航软件欢迎您</h1>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+		<div class="row_space_class"></div>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<label for="login_name" class="col-md-1">账号：</label>
+			<div class="col-md-3">
+				<input type="text" class="form-control" name="login_name"
+					id="login_name" placeholder="请输入账号" />
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+		<div class="row_space_class"></div>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<label for="pass" class="col-sm-1">密码：</label>
+			<div class="col-sm-3">
+				<input type="password" class="form-control" name="pass" id="pass"
+					placeholder="请输入密码" />
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+		<div class="row_space_class"></div>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-2">
+				<input class="btn btn-lg btn-primary" id="ok" type="button"
+					value="登录" onclick="validate();" />
+			</div>
+			<div class="col-md-2">
+				<input class="btn btn-lg btn-success" id="register" type="button"
+					value="注册" onclick="regist();" />
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="errorModal" tabindex="-1" role="dialog"
+			aria-labelledby="errorModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 id="wrong-tip" class="modal-title" id="myModalLabel">错误提示</h4>
+					</div>
+					<div id="wrong-tip-content" class="modal-body">账号密码不正确</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+						</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal -->
+		</div>
+	</div>
+	<!-- 以下是固定的引入 -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- 引入index.js -->
+	<script src="index.js" type="text/javascript"></script>
+</body>
+</html>
